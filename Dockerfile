@@ -13,8 +13,8 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" > /e
  DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install oracle-java7-installer oracle-java7-set-default curl
 
 # download and install spark
-RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.2.2-bin-hadoop2.4.tgz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s spark-1.2.2-bin-hadoop2.4 spark
+RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.4.0-bin-hadoop2.4.tgz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s spark-1.4.0-bin-hadoop2.4 spark
 
 # install cassandra
 ENV CASSANDRA_VERSION 2.1.9
